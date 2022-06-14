@@ -1,9 +1,9 @@
-import Hello from "./MainPage/Hello/Hello";
+import HelloSection from "./MainPage/_Hello/Hello";
 
 export default function Home() {
   return (
     <div>
-      <Hello></Hello>
+      <HelloSection></HelloSection>
     </div>
   );
 }

@@ -4,9 +4,14 @@ import styled from "styled-components";
 import Font from "../../Defaults/Font";
 import Color from "../../Defaults/Color";
 
-export default function ButtonDark({ icon, children }) {
+export default function ButtonRouded({
+  icon,
+  children,
+  color = "dark",
+  expand = "",
+}) {
   return (
-    <BackgroundDiv>
+    <BackgroundDiv className={`${color} ${expand}`}>
       {icon}
       {children}
     </BackgroundDiv>
@@ -16,7 +21,6 @@ export default function ButtonDark({ icon, children }) {
 const BackgroundDiv = styled.div`
   padding: 0.6rem 1.2rem;
   border-radius: 100rem;
-  background-color: ${Color.gray700};
   color: ${Color.white};
   font-size: ${Font.size[7] + "px"};
   font-weight: 400;
@@ -27,7 +31,21 @@ const BackgroundDiv = styled.div`
   user-select: none;
   cursor: pointer;
 
-  &:hover {
+  &.dark {
+    background-color: ${Color.gray700};
+  }
+  &.dark:hover {
     background-color: ${Color.gray800};
+  }
+
+  &.light {
+    background-color: ${Color.gray400};
+  }
+  &.light:hover {
+    background-color: ${Color.gray500};
+  }
+
+  &.expand {
+    max-width: none;
   }
 `;

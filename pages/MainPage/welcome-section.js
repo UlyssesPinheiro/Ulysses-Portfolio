@@ -4,7 +4,7 @@ import styled from "styled-components";
 import SectionHeader from "../../Components/Reusables/SectionHeader";
 import SectionWrapper from "../../Components/Reusables/SectionWrapper";
 import ProgrammerOnComputer from "../../Components/Sections/Hello/ProgrammerOnComputer";
-import ButtonDark from "../../Components/Reusables/Buttons/ButtonDark";
+import ButtonRouded from "../../Components/Reusables/Buttons/ButtonRouded";
 import EnvelopeSolid from "../../Components/Reusables/Icons/EnvelopeSolid";
 import Color from "../../Components/Defaults/Color";
 import Font from "../../Components/Defaults/Font";
@@ -27,7 +27,7 @@ export default function WelcomeSection() {
           </p>
           <ButtonDiv>
             <p>Want to contact me? Lets work together!</p>
-            <ButtonDark
+            <ButtonRouded
               icon={
                 <EnvelopeSolid
                   fill={Color.white}
@@ -36,7 +36,7 @@ export default function WelcomeSection() {
               }
             >
               Send a Message
-            </ButtonDark>
+            </ButtonRouded>
           </ButtonDiv>
         </TextDiv>
         <ProgrammerOnComputer />

@@ -8,11 +8,15 @@ import styled from "styled-components";
 
 export default function ProjectsSection() {
   return (
-    <SectionWrapper color={Color.primary100}>
-      <div id="my-projects">
+    <SectionWrapper color={Color.primary50}>
+      <ProjectsDiv id="my-projects">
         <SectionHeader>My Projects:</SectionHeader>
         <Project></Project>
-      </div>
+      </ProjectsDiv>
     </SectionWrapper>
   );
 }
+
+const ProjectsDiv = styled.div`
+  width: 100%;
+`;

@@ -10,6 +10,8 @@ const Color = {
   gray500: "#6B7280",
   gray700: "#374151",
   gray800: "#1F2937",
+
+  shadow: "rgba(17, 24, 39, 0.2)",
 };
 
 export default Color;

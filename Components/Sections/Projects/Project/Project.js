@@ -8,31 +8,48 @@ import ButtonRouded from "../../../Reusables/Buttons/ButtonRouded";
 import Github from "../../../Reusables/Icons/Github";
 import ComputerMouse from "../../../Reusables/Icons/ComputerMouse";
 
-export default function Project() {
+export default function Project({
+  title,
+  description,
+  techStack = [],
+  linkView,
+  linkGithub,
+  images,
+}) {
+  function openLink(link) {
+    window.open(link);
+  }
+
   return (
     <Grid>
       <ImgDiv>
         <ProjectImages>
-          <div className="firstDiv"></div>
-          <div className="secondDiv"></div>
-          <div className="code">
-            <Image src={binaryCode} layout="responsive" />
-          </div>
+          {images.map((element) => (
+            <div className="image">
+              <Image src={element}></Image>
+            </div>
+          ))}
         </ProjectImages>
+        <div className="code">
+          <Image src={binaryCode} layout="responsive" />
+        </div>
       </ImgDiv>
       <div>
-        <ProjectTitle>Project Title</ProjectTitle>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <ProjectTitle>{title}</ProjectTitle>
+        <p className="description">{description}</p>
         <strong>Tech Stack</strong>
+        <TechDiv>
+          {techStack.map((element) => (
+            <div className="techStack">
+              <Image src={element}></Image>
+            </div>
+          ))}
+        </TechDiv>
         <ButtonsDiv>
           <ButtonRouded
             color="light"
             expand="expand"
+            onClick={() => openLink(linkView)}
             icon={
               <ComputerMouse fill={Color.white} height={Font.size[8] + "px"} />
             }
@@ -41,6 +58,7 @@ export default function Project() {
           </ButtonRouded>
           <ButtonRouded
             expand="expand"
+            onClick={() => openLink(linkGithub)}
             icon={<Github fill={Color.white} height={Font.size[8] + "px"} />}
           >
             Github Code
@@ -58,34 +76,17 @@ const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   height: 20rem;
+
+  .description {
+    margin: 0.8rem 0 1rem;
+  }
 `;
 
 const ImgDiv = styled.div`
   width: 100%;
   height: 100%;
-`;
-
-const ProjectImages = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
   padding: 1rem;
-
-  .firstDiv,
-  .secondDiv {
-    width: 100%;
-    height: 100%;
-    background-color: ${Color.primary100};
-    z-index: 10;
-  }
-  .firstDiv {
-    border-radius: 1rem 0 0 1rem;
-  }
-  .secondDiv {
-    border-radius: 0 1rem 1rem 0;
-    background-color: ${Color.primary200};
-  }
+  position: relative;
 
   .code {
     position: absolute;
@@ -99,6 +100,25 @@ const ProjectImages = styled.div`
   }
 `;
 
+const ProjectImages = styled.div`
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 50px ${Color.shadow};
+
+  gap: 3px;
+  background-color: ${Color.primary500};
+  z-index: 10;
+
+  .image {
+    z-index: 10;
+  }
+`;
+
 const ProjectTitle = styled.h3`
   font-size: ${Font.size[7] + "px"};
   color: ${Color.primary500};
@@ -108,4 +128,18 @@ const ButtonsDiv = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
+`;
+
+const TechDiv = styled.div`
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  gap: 0.6rem;
+
+  .techStack {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 2px 2px ${Color.shadow};
+  }
 `;

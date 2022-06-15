@@ -9,9 +9,10 @@ export default function ButtonRouded({
   children,
   color = "dark",
   expand = "",
+  onClick,
 }) {
   return (
-    <BackgroundDiv className={`${color} ${expand}`}>
+    <BackgroundDiv onClick={onClick} className={`${color} ${expand}`}>
       {icon}
       {children}
     </BackgroundDiv>

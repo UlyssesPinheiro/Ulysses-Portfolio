@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/dist/client/image";
 import styled from "styled-components";
-import Color from "../../../Defaults/Color";
-import Font from "../../../Defaults/Font";
-import binaryCode from "../../../../public/Images/binaryCode.png";
-import ButtonRouded from "../../../Reusables/Buttons/ButtonRouded";
-import Github from "../../../Reusables/Icons/Github";
-import ComputerMouse from "../../../Reusables/Icons/ComputerMouse";
+import Color from "../../Defaults/Color";
+import Font from "../../Defaults/Font";
+import binaryCode from "../../../public/Images/binaryCode.png";
+import ButtonRouded from "../../Reusables/Buttons/ButtonRouded";
+import Github from "../../Reusables/Icons/Github";
+import ComputerMouse from "../../Reusables/Icons/ComputerMouse";
 
 export default function Project({
   title,
@@ -15,6 +15,7 @@ export default function Project({
   linkView,
   linkGithub,
   images,
+  reversedOrder = "",
 }) {
   function openLink(link) {
     window.open(link);
@@ -22,7 +23,7 @@ export default function Project({
 
   return (
     <Grid>
-      <ImgDiv>
+      <ImgDiv className={reversedOrder}>
         <ProjectImages>
           {images.map((element) => (
             <div className="image">
@@ -34,7 +35,7 @@ export default function Project({
           <Image src={binaryCode} layout="responsive" />
         </div>
       </ImgDiv>
-      <div>
+      <div className="textDiv">
         <ProjectTitle>{title}</ProjectTitle>
         <p className="description">{description}</p>
         <strong>Tech Stack</strong>
@@ -70,7 +71,6 @@ export default function Project({
 }
 
 const Grid = styled.div`
-  margin-top: 4rem;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
@@ -79,6 +79,13 @@ const Grid = styled.div`
 
   .description {
     margin: 0.8rem 0 1rem;
+  }
+
+  .textDiv {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 `;
 
@@ -97,6 +104,10 @@ const ImgDiv = styled.div`
     width: 90%;
     overflow: hidden;
     /* border-radius: 1rem; */
+  }
+
+  &.reversedOrder {
+    order: 1;
   }
 `;
 
@@ -125,6 +136,10 @@ const ProjectTitle = styled.h3`
 `;
 
 const ButtonsDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  width: 100%;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;

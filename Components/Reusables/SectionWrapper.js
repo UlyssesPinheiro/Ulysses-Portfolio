@@ -18,6 +18,7 @@ export default function SectionWrapper({ color, children }) {
 const MaxWidth = styled.div`
   padding: 5rem;
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 100rem;
 `;

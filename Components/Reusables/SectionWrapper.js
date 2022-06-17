@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function SectionWrapper({ color, children }) {
+export default function SectionWrapper({ id, color, children }) {
   const Wrapper = styled.div`
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ export default function SectionWrapper({ color, children }) {
 
   return (
     <Wrapper>
-      <MaxWidth>{children}</MaxWidth>
+      <MaxWidth id={id}>{children}</MaxWidth>
     </Wrapper>
   );
 }

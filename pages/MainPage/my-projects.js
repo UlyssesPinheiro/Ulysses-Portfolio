@@ -17,14 +17,16 @@ import appExtra2 from "../../public/Images/Projects/ExtraIncome/appExtra2.jpg";
 import appExtra3 from "../../public/Images/Projects/ExtraIncome/appExtra3.jpg";
 import myHabits1 from "../../public/Images/Projects/MyHabits/myHabits1.png";
 import myHabits2 from "../../public/Images/Projects/MyHabits/myHabits2.png";
+import memoryGame from "../../public/Images/Projects/MemoryGame/MemoryGame.png";
 
 export default function ProjectsSection() {
   return (
-    <SectionWrapper color={Color.primary50}>
+    <SectionWrapper id="my-projects" color={Color.primary50}>
       <SectionHeader>My Projects:</SectionHeader>
-      <ProjectsDiv id="my-projects">
+      <ProjectsDiv>
         <Project
-          title="Extra Income App [React Native / Expo - Multiplatform App]"
+          title="Extra Income App"
+          subtitle="[React Native / Expo - Multiplatform App]"
           description="The app allows the user
           to publish products and services, search them and reorder product listings. Local state storage managed with Redux Persist. Layout CSS developed with Styled-Components."
           techStack={[ReactImg, Expo, JavaScript, Html5, Css3]}
@@ -34,7 +36,7 @@ export default function ProjectsSection() {
         ></Project>
         <Project
           title="My Habits - Create new habits"
-          description="Using JavaScript to add HTML Markups. Use of DOM
+          description="Use of DOM
           manipulation to know how many objects to generate and
           display on screen. To create new habits, the user fills a form.
           Data is stored locally, and it is not lost after a page reload."
@@ -42,6 +44,19 @@ export default function ProjectsSection() {
           images={[myHabits1, myHabits2]}
           reversedOrder="reversedOrder"
           linkView="https://ulyssespinheiro.github.io/my-habits/"
+          linkGithub="https://github.com/UlyssesPinheiro/my-habits"
+        ></Project>
+        <Project
+          title="Memory Game"
+          description="Learned how to simulate the flip of a card, using classes with
+          different widths and changing the image SRC attribute,
+          applying transition durations and sounds. Discovered how to
+          generate a random array of cards, and detect the order of
+          cards on the screen to create the game logic."
+          techStack={[JavaScript, Html5, Css3]}
+          images={[memoryGame]}
+          reversedOrder=""
+          linkView="https://ulyssespinheiro.github.io/Memory-Game/"
           linkGithub="https://github.com/UlyssesPinheiro/my-habits"
         ></Project>
       </ProjectsDiv>

@@ -1,25 +1,42 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
 import Color from "../../Defaults/Color";
 
 export default function NavBar() {
   return (
     <NavDivUl>
       <NavItem>
-        <Link href="#my-projects">
+        <div
+          onClick={() =>
+            document
+              .getElementById("my-projects")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
           <p>My Projects</p>
-        </Link>
+        </div>
       </NavItem>
       <NavItem>
-        <Link href="#completed-courses">
+        <div
+          onClick={() =>
+            document
+              .getElementById("completed-courses")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
           <p>Completed Courses</p>
-        </Link>
+        </div>
       </NavItem>
       <NavItem>
-        <Link href="#contact-me">
+        <div
+          onClick={() =>
+            document
+              .getElementById("contact-me")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
           <p>Contact Me</p>
-        </Link>
+        </div>
       </NavItem>
     </NavDivUl>
   );

@@ -48,21 +48,23 @@ export default function Project({
         </TechDiv>
         <ButtonsDiv>
           <ButtonRouded
+            title="Try out the project"
             color="light"
             expand="expand"
             onClick={() => openLink(linkView)}
             icon={
-              <ComputerMouse fill={Color.white} height={Font.size[8] + "px"} />
+              <ComputerMouse fill={Color.white} height={Font.size[7] + "px"} />
             }
           >
             Live View
           </ButtonRouded>
           <ButtonRouded
+            title="Opens the project's source code"
             expand="expand"
             onClick={() => openLink(linkGithub)}
-            icon={<Github fill={Color.white} height={Font.size[8] + "px"} />}
+            icon={<Github fill={Color.white} height={Font.size[7] + "px"} />}
           >
-            Github Code
+            Code
           </ButtonRouded>
         </ButtonsDiv>
       </div>
@@ -91,7 +93,6 @@ const Grid = styled.div`
 
 const ImgDiv = styled.div`
   width: 100%;
-  height: 100%;
   padding: 1rem;
   position: relative;
 
@@ -114,7 +115,8 @@ const ImgDiv = styled.div`
 const ProjectImages = styled.div`
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: min-content;
+  max-height: 20rem;
   display: flex;
 
   border-radius: 1rem;
@@ -126,6 +128,7 @@ const ProjectImages = styled.div`
   z-index: 10;
 
   .image {
+    font-size: 0;
     z-index: 10;
   }
 `;

@@ -6,7 +6,7 @@ import AngleLeft from "./Carousel/AngleLeft";
 import AngleRight from "./Carousel/AngleRight";
 import BulletCarousel from "./BulletCarousel";
 
-export default function CoursesCarousel({ certificates, thumbnails }) {
+export default function CoursesCarousel({ certificates, thumbnails, links }) {
   const [currentSlide, setCurrentSlide] = useState(1);
 
   function slideBack() {
@@ -16,12 +16,19 @@ export default function CoursesCarousel({ certificates, thumbnails }) {
     setCurrentSlide((e) => (e < certificates.length ? e + 1 : 1));
   }
 
+  function visitCertificatePage(index) {
+    window.open(links[index], "_blank");
+  }
+
   return (
     <Carousel>
       <CertificateWrapper>
         {certificates.map((el, index) => (
           <Certificate className={`slide${currentSlide}`}>
-            <CropCertificate>
+            <CropCertificate
+              title="Link to the original certificate"
+              onClick={() => visitCertificatePage(index)}
+            >
               <Image src={el} layout="responsive"></Image>
             </CropCertificate>
             {thumbnails[index] && (
@@ -113,6 +120,7 @@ const Switch = styled.div`
 `;
 
 const CropCertificate = styled.div`
+  cursor: pointer;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 40px ${Color.shadow};

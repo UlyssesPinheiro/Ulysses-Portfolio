@@ -1,5 +1,5 @@
 import * as React from "react";
-import Color from "../../../Components/Defaults/Color";
+import Color from "../../../Defaults/Color";
 
 const SvgComponent = (props) => (
   <svg

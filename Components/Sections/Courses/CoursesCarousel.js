@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Image from "next/dist/client/image";
 import styled from "styled-components";
 import Color from "../../Defaults/Color";
-import AngleLeft from "../../../public/Icons/Carousel/AngleLeft";
-import AngleRight from "../../../public/Icons/Carousel/AngleRight";
+import AngleLeft from "./Carousel/AngleLeft";
+import AngleRight from "./Carousel/AngleRight";
+import BulletCarousel from "./BulletCarousel";
 
 export default function CoursesCarousel({ certificates, thumbnails }) {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -15,21 +16,11 @@ export default function CoursesCarousel({ certificates, thumbnails }) {
     setCurrentSlide((e) => (e < certificates.length ? e + 1 : 1));
   }
 
-  const Certificate = styled.div`
-    width: 100%;
-    padding: 2rem 5rem 3rem;
-    transform: ${"translateX(-" + (currentSlide - 1).toString() + "00%)"};
-    overflow: hidden;
-
-    flex-shrink: 0;
-    font-size: 0;
-  `;
-
   return (
     <Carousel>
       <CertificateWrapper>
         {certificates.map((el, index) => (
-          <Certificate>
+          <Certificate className={`slide${currentSlide}`}>
             <CropCertificate>
               <Image src={el} layout="responsive"></Image>
             </CropCertificate>
@@ -47,9 +38,41 @@ export default function CoursesCarousel({ certificates, thumbnails }) {
       <Switch onClick={slideForward} className="right">
         <AngleRight />
       </Switch>
+      <BulletCarousel
+        amount={certificates}
+        currentSlide={currentSlide}
+        setCurrentSlide={setCurrentSlide}
+      />
     </Carousel>
   );
 }
+
+const Certificate = styled.div`
+  width: 100%;
+  padding: 2rem 5rem 3rem;
+  overflow: hidden;
+
+  flex-shrink: 0;
+  font-size: 0;
+  transition: all 400ms ease-out;
+
+  &.slide1 {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  &.slide2 {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  &.slide3 {
+    transform: translateX(-200%);
+    opacity: 1;
+  }
+  &.slide4 {
+    transform: translateX(-400%);
+    opacity: 1;
+  }
+`;
 
 const CertificateWrapper = styled.div`
   display: flex;
@@ -78,6 +101,14 @@ const Switch = styled.div`
   &.left {
     position: absolute;
     left: -5rem;
+  }
+  &.right:hover,
+  &.left:hover {
+    opacity: 0.6;
+  }
+  &.right:active,
+  &.left:active {
+    opacity: 0.8;
   }
 `;
 

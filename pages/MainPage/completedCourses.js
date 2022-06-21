@@ -2,11 +2,12 @@ import React from "react";
 import SectionWrapper from "../../Components/Reusables/SectionWrapper";
 import SectionHeader from "../../Components/Reusables/SectionHeader";
 import Color from "../../Components/Defaults/Color";
-import CoursesCarroussel from "../../Components/Sections/Courses/CoursesCarroussel";
+import CoursesCarroussel from "../../Components/Sections/Courses/CoursesCarousel";
 import styled from "styled-components";
 
 import HtmlCss from "../../public/Images/Courses/HtmlCSs.jpg";
 import JavaScriptImg from "../../public/Images/Courses/JavaScript.jpg";
+import ReactImg from "../../public/Images/Courses/React.jpg";
 
 import thumbHtmlCss from "../../public/Images/Courses/Thumbnails/thumbHtmlCss.jpg";
 import thumbJS from "../../public/Images/Courses/Thumbnails/thumbJS.jpg";
@@ -18,8 +19,8 @@ export default function completedCourses() {
       <CenteredDiv>
         <SectionHeader>Completed courses</SectionHeader>
         <CoursesCarroussel
-          certificates={[HtmlCss, JavaScriptImg]}
-          thumbnails={(thumbHtmlCss, thumbJS)}
+          certificates={[HtmlCss, JavaScriptImg, ReactImg]}
+          thumbnails={[thumbHtmlCss, thumbJS, thumbReact]}
         ></CoursesCarroussel>
       </CenteredDiv>
       <div>

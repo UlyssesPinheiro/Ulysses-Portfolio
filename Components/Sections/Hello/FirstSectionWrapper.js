@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function SectionWrapper({ id, color, children }) {
+export default function FirstSectionWrapper({
+  id,
+  color = "#ffffff",
+  children,
+}) {
   return (
     <div
       style={{
@@ -20,5 +24,5 @@ const MaxWidth = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 90rem;
+  max-width: 100rem;
 `;

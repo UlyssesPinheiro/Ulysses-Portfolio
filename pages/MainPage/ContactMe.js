@@ -30,6 +30,7 @@ const TitleWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: grid;
+  max-width: 80rem;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 `;

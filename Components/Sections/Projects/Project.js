@@ -93,18 +93,16 @@ const Grid = styled.div`
 
 const ImgDiv = styled.div`
   width: 100%;
-  padding: 1rem;
   position: relative;
 
   .code {
     position: absolute;
     z-index: 5;
-    right: -1rem;
+    right: -1.3rem;
     top: -1rem;
     height: 90%;
-    width: 90%;
+    width: 95%;
     overflow: hidden;
-    /* border-radius: 1rem; */
   }
 
   &.reversedOrder {
@@ -141,7 +139,6 @@ const ProjectTitle = styled.h3`
 const ButtonsDiv = styled.div`
   position: absolute;
   bottom: 0;
-  margin-bottom: 1rem;
   width: 100%;
   display: grid;
   gap: 1rem;

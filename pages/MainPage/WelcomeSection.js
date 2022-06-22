@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import SectionHeader from "../../Components/Reusables/SectionHeader";
-import SectionWrapper from "../../Components/Reusables/SectionWrapper";
+import FirstSectionWrapper from "../../Components/Sections/Hello/FirstSectionWrapper";
 import ProgrammerOnComputer from "../../Components/Sections/Hello/ProgrammerOnComputer";
 import ButtonRounded from "../../Components/Reusables/Buttons/ButtonRounded";
 import EnvelopeSolid from "../../Components/Reusables/Icons/EnvelopeSolid";
@@ -11,7 +11,7 @@ import Font from "../../Components/Defaults/Font";
 
 export default function WelcomeSection() {
   return (
-    <SectionWrapper>
+    <FirstSectionWrapper>
       <Grid>
         <TextDiv id="welcome-section">
           <SectionHeader>Hi, I’m Ulysses,</SectionHeader>
@@ -46,7 +46,7 @@ export default function WelcomeSection() {
         </TextDiv>
         <ProgrammerOnComputer />
       </Grid>
-    </SectionWrapper>
+    </FirstSectionWrapper>
   );
 }
 

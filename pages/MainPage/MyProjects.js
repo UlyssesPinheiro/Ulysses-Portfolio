@@ -36,8 +36,7 @@ export default function ProjectsSection() {
         ></Project>
         <Project
           title="My Habits - Create new habits"
-          description="Use of DOM
-          manipulation to know how many objects to generate and display on screen. To create new habits, the user fills a form. Data is stored locally, and it is not lost after a page reload."
+          description="Use of DOM manipulation to know how many objects to generate and display on screen. To create new habits, the user fills a form. Data is stored locally, and it is not lost after the page is closed."
           techStack={[JavaScript, Html5, Css3]}
           images={[myHabits1, myHabits2]}
           reversedOrder="reversedOrder"
@@ -46,7 +45,7 @@ export default function ProjectsSection() {
         ></Project>
         <Project
           title="Memory Game"
-          description="Use of classes and image SRC attribute, to flip cards, applying transition durations and sounds. A random array of cards is created. Mouse clicks detects the card displayed aggainst the previous one to create the game logic."
+          description="Classes and SRC attributes are used, with transitions and sound to flip the cards. The game creates a random array of cards. Then after each click, the logic compares the shown card aggainst the previous one."
           techStack={[JavaScript, Html5, Css3]}
           images={[memoryGame]}
           reversedOrder=""
@@ -59,7 +58,7 @@ export default function ProjectsSection() {
 }
 
 const ProjectsDiv = styled.div`
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
   width: 100%;
   display: flex;

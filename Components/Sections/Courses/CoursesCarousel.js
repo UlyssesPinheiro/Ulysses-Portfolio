@@ -24,7 +24,10 @@ export default function CoursesCarousel({ certificates, thumbnails, links }) {
     <Carousel>
       <CertificateWrapper>
         {certificates.map((el, index) => (
-          <Certificate className={`slide${currentSlide}`}>
+          <Certificate
+            className={`slide${currentSlide}`}
+            key={`Certificate${index}`}
+          >
             <CropCertificate
               title="Link to the original certificate"
               onClick={() => visitCertificatePage(index)}

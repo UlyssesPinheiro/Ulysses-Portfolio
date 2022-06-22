@@ -17,9 +17,10 @@ export default function BulletCarousel({
     <BulletDiv>
       {amount.map((e, index) =>
         index + 1 === currentSlide ? (
-          <CircleDotSolid />
+          <CircleDotSolid key={`CircleDotSolid${index}`} />
         ) : (
           <CircleDot
+            key={`CircleDot${index}`}
             className={"circleDot"}
             onClick={() => goToPage(index + 1)}
           />

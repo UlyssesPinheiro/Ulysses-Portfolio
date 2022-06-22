@@ -25,8 +25,8 @@ export default function Project({
     <Grid>
       <ImgDiv className={reversedOrder}>
         <ProjectImages>
-          {images.map((element) => (
-            <div className="image">
+          {images.map((element, index) => (
+            <div className="image" key={`image${index}`}>
               <Image src={element}></Image>
             </div>
           ))}
@@ -40,8 +40,8 @@ export default function Project({
         <p className="description">{description}</p>
         <strong>Tech Stack</strong>
         <TechDiv>
-          {techStack.map((element) => (
-            <div className="techStack">
+          {techStack.map((element, index) => (
+            <div className="techStack" key={`techStack${index}`}>
               <Image src={element}></Image>
             </div>
           ))}

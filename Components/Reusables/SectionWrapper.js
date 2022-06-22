@@ -2,16 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 export default function SectionWrapper({ id, color, children }) {
-  const Wrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    background-color: ${color};
-  `;
-
   return (
-    <Wrapper>
+    <div
+      style={{
+        backgroundColor: color,
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <MaxWidth id={id}>{children}</MaxWidth>
-    </Wrapper>
+    </div>
   );
 }
 

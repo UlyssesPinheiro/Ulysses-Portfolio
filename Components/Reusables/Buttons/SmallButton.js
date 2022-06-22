@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Font from "../../Defaults/Font";
 import Color from "../../Defaults/Color";
 
-export default function ButtonRouded({
+export default function ButtonRounded({
   icon,
   children,
   color = "dark",
@@ -13,29 +13,35 @@ export default function ButtonRouded({
   title,
 }) {
   return (
-    <BackgroundDiv
+    <ButtonSty
       title={title}
       onClick={onClick}
-      className={`${color} ${expand}`}
+      className={`button ${color} ${expand}`}
     >
-      {icon}
       {children}
-    </BackgroundDiv>
+      {icon}
+    </ButtonSty>
   );
 }
 
-const BackgroundDiv = styled.div`
-  padding: 0.6rem 1.2rem;
+const ButtonSty = styled.button`
+  border: none;
+  padding: 0.4rem 0.8rem;
   border-radius: 100rem;
   color: ${Color.white};
-  font-size: ${Font.size[7] + "px"};
-  font-weight: 400;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.8rem;
   max-width: fit-content;
+  align-items: center;
   user-select: none;
   cursor: pointer;
+
+  font-size: ${Font.size[5] + "px"};
+
+  &:focus {
+    outline: 2px solid ${Color.primary700} !important;
+  }
 
   &.dark {
     background-color: ${Color.gray700};
@@ -53,5 +59,9 @@ const BackgroundDiv = styled.div`
 
   &.expand {
     max-width: none;
+  }
+
+  .icon {
+    height: ${Font.size[5] + "px"};
   }
 `;

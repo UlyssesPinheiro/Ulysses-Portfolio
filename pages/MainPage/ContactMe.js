@@ -3,15 +3,33 @@ import SectionHeader from "../../Components/Reusables/SectionHeader";
 import SectionWrapper from "../../Components/Reusables/SectionWrapper";
 import ContactImg from "../../public/Images/ContactMe/ContactMe.jpg";
 import Image from "next/dist/client/image";
+import styled from "styled-components";
+import MessageForm from "../../Components/Sections/ContactMe/MessageForm";
 
 export default function ContactMe() {
   return (
-    <div>
-      <SectionWrapper>
+    <SectionWrapper id="contact-me">
+      <TitleWrapper>
         <SectionHeader>Let's work together!</SectionHeader>
         <p>Send me a message, and i’ll get back to you as fast as possible</p>
+      </TitleWrapper>
+      <Wrapper>
         <Image src={ContactImg} />
-      </SectionWrapper>
-    </div>
+        <MessageForm>a</MessageForm>
+      </Wrapper>
+    </SectionWrapper>
   );
 }
+
+const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+`;

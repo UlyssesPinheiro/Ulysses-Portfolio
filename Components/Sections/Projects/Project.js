@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Color from "../../Defaults/Color";
 import Font from "../../Defaults/Font";
 import binaryCode from "../../../public/Images/binaryCode.png";
-import ButtonRouded from "../../Reusables/Buttons/ButtonRouded";
+import ButtonRounded from "../../Reusables/Buttons/ButtonRounded";
 import Github from "../../Reusables/Icons/Github";
 import ComputerMouse from "../../Reusables/Icons/ComputerMouse";
 
@@ -47,7 +47,7 @@ export default function Project({
           ))}
         </TechDiv>
         <ButtonsDiv>
-          <ButtonRouded
+          <ButtonRounded
             title="Try out the project"
             color="light"
             expand="expand"
@@ -57,15 +57,15 @@ export default function Project({
             }
           >
             Live View
-          </ButtonRouded>
-          <ButtonRouded
+          </ButtonRounded>
+          <ButtonRounded
             title="Opens the project's source code"
             expand="expand"
             onClick={() => openLink(linkGithub)}
             icon={<Github fill={Color.white} height={Font.size[7] + "px"} />}
           >
             Code
-          </ButtonRouded>
+          </ButtonRounded>
         </ButtonsDiv>
       </div>
     </Grid>

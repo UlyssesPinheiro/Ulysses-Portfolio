@@ -13,7 +13,7 @@ import thumbHtmlCss from "../../public/Images/Courses/Thumbnails/thumbHtmlCss.jp
 import thumbJS from "../../public/Images/Courses/Thumbnails/thumbJS.jpg";
 import thumbReact from "../../public/Images/Courses/Thumbnails/thumbReact.jpg";
 
-export default function completedCourses() {
+export default function CompletedCourses() {
   return (
     <SectionWrapper id="completed-courses" color={Color.primary100}>
       <CenteredDiv>

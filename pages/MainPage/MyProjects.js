@@ -17,7 +17,7 @@ import appExtra2 from "../../public/Images/Projects/ExtraIncome/appExtra2.jpg";
 import appExtra3 from "../../public/Images/Projects/ExtraIncome/appExtra3.jpg";
 import myHabits1 from "../../public/Images/Projects/MyHabits/myHabits1.png";
 import myHabits2 from "../../public/Images/Projects/MyHabits/myHabits2.png";
-import memoryGame from "../../public/Images/Projects/MemoryGame/memoryGame.png";
+import MemoryGame from "../../public/Images/Projects/MemoryGame/MemoryGame.png";
 
 export default function ProjectsSection() {
   return (
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
           title="Memory Game"
           description="Classes and SRC attributes are used, with transitions and sound to flip the cards. The game creates a random array of cards. Then after each click, the logic compares the shown card aggainst the previous one."
           techStack={[JavaScript, Html5, Css3]}
-          images={[memoryGame]}
+          images={[MemoryGame]}
           reversedOrder=""
           linkView="https://ulyssespinheiro.github.io/Memory-Game/"
           linkGithub="https://github.com/UlyssesPinheiro/my-habits"

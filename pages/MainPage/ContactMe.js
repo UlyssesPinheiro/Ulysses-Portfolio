@@ -11,12 +11,12 @@ export default function ContactMe() {
   return (
     <SectionWrapper id="contact-me">
       <TitleWrapper>
-        <SectionHeader>Let's work together!</SectionHeader>
+        <SectionHeader>Let&apos;s work together!</SectionHeader>
         <p>Send me a message, and i’ll get back to you as fast as possible</p>
       </TitleWrapper>
       <Wrapper>
         <Image src={ContactImg} />
-        <MessageForm>a</MessageForm>
+        <MessageForm />
       </Wrapper>
       <OtherContactOptions />
     </SectionWrapper>

@@ -37,7 +37,7 @@ const FormContainer = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   gap: 0.8rem;
   height: 100%;
 

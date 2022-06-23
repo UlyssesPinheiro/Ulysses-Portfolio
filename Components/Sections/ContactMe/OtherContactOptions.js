@@ -13,12 +13,12 @@ export default function OtherContactOptions() {
 
   return (
     <OuterContainer>
-      You can also contact me here:
+      <p className="title">You can also contact me here:</p>
       <div className="buttonDiv">
         <ContactLink
           onClick={openWindow.bind(this, "mailto:ulyssespinheiro00@gmail.com")}
         >
-          <Gmail fill={Color.gray500}></Gmail>Email
+          <Gmail fill={Color.gray800}></Gmail>Email
         </ContactLink>
         <ContactLink
           onClick={openWindow.bind(
@@ -26,12 +26,12 @@ export default function OtherContactOptions() {
             "https://www.linkedin.com/in/ulysses-pinheiro-8308b1171/?locale=en_US"
           )}
         >
-          <LinkedIn fill={Color.gray500}></LinkedIn>LinkedIn
+          <LinkedIn fill={Color.gray800}></LinkedIn>LinkedIn
         </ContactLink>
         <ContactLink
           onClick={openWindow.bind(this, "https://github.com/UlyssesPinheiro")}
         >
-          <GitHub fill={Color.gray500}></GitHub>
+          <GitHub fill={Color.gray800}></GitHub>
           GitHub
         </ContactLink>
       </div>
@@ -46,7 +46,11 @@ const OuterContainer = styled.div`
   gap: 1rem;
   flex-direction: column;
   font-size: ${Font.size[4] + "px"};
-  color: ${Color.gray500};
+  color: ${Color.gray800};
+
+  .title {
+    opacity: 0.6;
+  }
 
   .buttonDiv {
     display: flex;
@@ -60,8 +64,7 @@ const ContactLink = styled.button`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: ${Font.size[5] + "px"};
-  color: ${Color.gray500};
-  border-radius: 1rem;
+  color: ${Color.gray800};
 
   display: flex;
   align-items: center;
@@ -69,11 +72,22 @@ const ContactLink = styled.button`
   padding: 1rem;
   gap: 0.5rem;
 
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  cursor: pointer;
+
   svg {
     height: 2.5rem;
   }
 
+  border-bottom: 2px solid transparent;
+
   &:focus {
-    outline: 4px solid ${Color.primary200};
+    outline: none !important;
+    border-bottom: 2px solid ${Color.primary500};
   }
 `;

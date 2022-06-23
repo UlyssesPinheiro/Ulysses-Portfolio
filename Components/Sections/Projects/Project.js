@@ -5,7 +5,7 @@ import Color from "../../Defaults/Color";
 import Font from "../../Defaults/Font";
 import binaryCode from "../../../public/Images/binaryCode.png";
 import ButtonRounded from "../../Reusables/Buttons/ButtonRounded";
-import Github from "../../Reusables/Icons/GitHub";
+import GitHubSVG from "../../Reusables/Icons/GitHubSVG";
 import ComputerMouse from "../../Reusables/Icons/ComputerMouse";
 
 export default function Project({
@@ -62,7 +62,7 @@ export default function Project({
             title="Opens the project's source code"
             expand="expand"
             onClick={() => openLink(linkGithub)}
-            icon={<Github fill={Color.white} height={Font.size[7] + "px"} />}
+            icon={<GitHubSVG fill={Color.white} height={Font.size[7] + "px"} />}
           >
             Code
           </ButtonRounded>

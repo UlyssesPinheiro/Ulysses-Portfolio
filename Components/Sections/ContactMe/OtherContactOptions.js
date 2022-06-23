@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Color from "../../Defaults/Color";
 import Font from "../../Defaults/Font";
-import GitHub from "../../Reusables/Icons/GitHub";
+import GitHubSVG from "../../Reusables/Icons/GitHubSVG";
 import Gmail from "../../Reusables/Icons/Gmail";
 import LinkedIn from "../../Reusables/Icons/LinkedIn";
 
@@ -31,7 +31,7 @@ export default function OtherContactOptions() {
         <ContactLink
           onClick={openWindow.bind(this, "https://github.com/UlyssesPinheiro")}
         >
-          <GitHub fill={Color.gray800}></GitHub>
+          <GitHubSVG fill={Color.gray800}></GitHubSVG>
           GitHub
         </ContactLink>
       </div>

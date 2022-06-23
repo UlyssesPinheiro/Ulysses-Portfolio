@@ -5,7 +5,7 @@ import Color from "../../Defaults/Color";
 import Font from "../../Defaults/Font";
 import binaryCode from "../../../public/Images/binaryCode.png";
 import ButtonRounded from "../../Reusables/Buttons/ButtonRounded";
-import Github from "../../Reusables/Icons/Github";
+import Github from "../../Reusables/Icons/GitHub";
 import ComputerMouse from "../../Reusables/Icons/ComputerMouse";
 
 export default function Project({

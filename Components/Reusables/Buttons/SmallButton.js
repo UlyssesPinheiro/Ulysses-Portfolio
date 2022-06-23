@@ -40,7 +40,7 @@ const ButtonSty = styled.button`
   font-size: ${Font.size[5] + "px"};
 
   &:focus {
-    outline: 2px solid ${Color.primary700} !important;
+    outline: none !important;
   }
 
   &.dark {

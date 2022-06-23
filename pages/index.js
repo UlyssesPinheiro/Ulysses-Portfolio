@@ -20,6 +20,6 @@ export default function Home() {
 
 const Container = styled.div`
   *:focus {
-    outline: 4px solid ${Color.primary700};
+    outline: 4px solid ${Color.primary500};
   }
 `;

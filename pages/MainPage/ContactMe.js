@@ -5,6 +5,7 @@ import ContactImg from "../../public/Images/ContactMe/ContactMe.jpg";
 import Image from "next/dist/client/image";
 import styled from "styled-components";
 import MessageForm from "../../Components/Sections/ContactMe/MessageForm";
+import OtherContactOptions from "../../Components/Sections/ContactMe/OtherContactOptions";
 
 export default function ContactMe() {
   return (
@@ -17,6 +18,7 @@ export default function ContactMe() {
         <Image src={ContactImg} />
         <MessageForm>a</MessageForm>
       </Wrapper>
+      <OtherContactOptions />
     </SectionWrapper>
   );
 }

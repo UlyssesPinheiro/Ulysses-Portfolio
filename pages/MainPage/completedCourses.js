@@ -5,7 +5,7 @@ import Color from "../../Components/Defaults/Color";
 import CoursesCarroussel from "../../Components/Sections/Courses/CoursesCarousel";
 import styled from "styled-components";
 
-import HtmlCss from "../../public/Images/Courses/HtmlCSs.jpg";
+import HtmlCss from "../../public/Images/Courses/HtmlCss.jpg";
 import JavaScriptImg from "../../public/Images/Courses/JavaScript.jpg";
 import ReactImg from "../../public/Images/Courses/React.jpg";
 

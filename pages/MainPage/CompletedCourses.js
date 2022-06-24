@@ -28,7 +28,6 @@ export default function CompletedCourses() {
           thumbnails={[thumbHtmlCss, thumbJS, thumbReact]}
         ></CoursesCarroussel>
       </CenteredDiv>
-      <div></div>
     </SectionWrapper>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CircleDotSolid from "./Carousel/Bullets/CircleDotSolid";
 import CircleDot from "./Carousel/Bullets/CircleDot";
+import MediaQuery from "../../Defaults/MediaQuery";
 
 export default function BulletCarousel({
   amount,
@@ -37,4 +38,8 @@ const BulletDiv = styled.div`
   justify-content: center;
   height: 1rem;
   gap: 0.6rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    bottom: 0rem;
+  }
 `;

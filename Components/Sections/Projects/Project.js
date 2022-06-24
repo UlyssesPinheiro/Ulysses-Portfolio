@@ -34,7 +34,7 @@ const Grid = styled.div`
   width: 100%;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  height: 20rem;
+  height: fit-content;
 
   .description {
     margin: 0.8rem 0 1rem;
@@ -54,8 +54,10 @@ const Grid = styled.div`
       }
     }
   }
-  @media (max-width: ${MediaQuery.notebook}) {
-    height: 17rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 `;
 

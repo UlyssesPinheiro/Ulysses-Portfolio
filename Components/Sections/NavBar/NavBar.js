@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Color from "../../Defaults/Color";
+import MediaQuery from "../../Defaults/MediaQuery";
 
 export default function NavBar() {
   return (
@@ -47,6 +48,11 @@ const NavDivUl = styled.ul`
   flex-direction: row;
   margin: 2rem 5rem;
   gap: 4rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    margin: 2rem 5rem 0;
+    justify-content: space-evenly;
+  }
 `;
 
 const NavItem = styled.li`

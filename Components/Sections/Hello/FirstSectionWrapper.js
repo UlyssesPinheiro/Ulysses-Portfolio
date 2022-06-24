@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MediaQuery from "../../Defaults/MediaQuery";
 
 export default function FirstSectionWrapper({
   id,
@@ -25,4 +26,8 @@ const MaxWidth = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 100rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    padding: 0 2rem 5rem;
+  }
 `;

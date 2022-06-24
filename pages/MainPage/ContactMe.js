@@ -6,18 +6,24 @@ import Image from "next/dist/client/image";
 import styled from "styled-components";
 import MessageForm from "../../Components/Sections/ContactMe/MessageForm";
 import OtherContactOptions from "../../Components/Sections/ContactMe/OtherContactOptions";
+import MediaQuery from "../../Components/Defaults/MediaQuery";
+import Font from "../../Components/Defaults/Font";
 
 export default function ContactMe() {
   return (
     <SectionWrapper id="contact-me">
       <TitleWrapper>
         <SectionHeader>Let&apos;s work together!</SectionHeader>
-        <p>Send me a message, and i’ll get back to you as fast as possible</p>
+        <p>
+          Send me a message, and I will get back to you as fast as possible.
+        </p>
       </TitleWrapper>
-      <Wrapper>
-        <Image src={ContactImg} />
+      <Grid>
+        <ImageDiv>
+          <Image src={ContactImg} />
+        </ImageDiv>
         <MessageForm />
-      </Wrapper>
+      </Grid>
       <OtherContactOptions />
     </SectionWrapper>
   );
@@ -28,11 +34,27 @@ const TitleWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    p {
+      font-size: ${Font.size[2] + "px"};
+    }
+  }
 `;
 
-const Wrapper = styled.div`
+const Grid = styled.div`
   display: grid;
   max-width: 80rem;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const ImageDiv = styled.div`
+  @media (max-width: ${MediaQuery.tablet}) {
+    padding: 0 4rem;
+  }
 `;

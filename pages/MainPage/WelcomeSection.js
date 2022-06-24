@@ -13,19 +13,22 @@ import MediaQuery from "../../Components/Defaults/MediaQuery";
 export default function WelcomeSection() {
   return (
     <FirstSectionWrapper>
-      <Grid>
-        <TextDiv id="welcome-section">
-          <SectionHeader>Hi, I’m Ulysses,</SectionHeader>
-          <p>
-            I am a front-end web developer, using <strong>HTML, CSS </strong>and
-            <strong> JavaScript</strong> as main languages. Graduated in Product
-            Design by Puc-Rio in 2020. Currently, developing personal projects
-            and responsive websites, using{" "}
-            <strong>
-              React, React-Native, Redux, GIT, GitHub, NPM, Bootstrap
-            </strong>{" "}
-            and <strong>jQuery</strong>.
-          </p>
+      <Grid id="welcome-section">
+        <TextDiv>
+          <div>
+            <SectionHeader>Hi, I’m Ulysses,</SectionHeader>
+            <p>
+              I am a front-end web developer, using <strong>HTML, CSS </strong>
+              and
+              <strong> JavaScript</strong> as main languages. Graduated in
+              Product Design by Puc-Rio in 2020. Currently, developing personal
+              projects and responsive websites, using{" "}
+              <strong>
+                React, React-Native, Redux, GIT, GitHub, NPM, Bootstrap
+              </strong>{" "}
+              and <strong>jQuery</strong>.
+            </p>
+          </div>
           <ButtonDiv>
             <p>Want to contact me? Lets work together!</p>
             <ButtonRounded
@@ -45,7 +48,9 @@ export default function WelcomeSection() {
             </ButtonRounded>
           </ButtonDiv>
         </TextDiv>
-        <ProgrammerOnComputer />
+        <Programmer>
+          <ProgrammerOnComputer />
+        </Programmer>
       </Grid>
     </FirstSectionWrapper>
   );
@@ -53,6 +58,16 @@ export default function WelcomeSection() {
 
 const TextDiv = styled.div`
   max-width: 35rem;
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    order: 1;
+    max-width: 100%;
+    padding: 0 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Grid = styled.div`
@@ -65,6 +80,10 @@ const Grid = styled.div`
   @media (max-width: ${MediaQuery.notebook}) {
     font-size: ${Font.size[2] + "px"};
   }
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ButtonDiv = styled.div`
@@ -72,4 +91,10 @@ const ButtonDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+`;
+
+const Programmer = styled.div`
+  @media (max-width: ${MediaQuery.tablet}) {
+    padding: 0 5rem;
+  }
 `;

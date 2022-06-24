@@ -38,6 +38,10 @@ const ImgDiv = styled.div`
 
   &.reversedOrder {
     order: 1;
+
+    @media (max-width: ${MediaQuery.tablet}) {
+      order: 0;
+    }
   }
 `;
 
@@ -61,5 +65,9 @@ const Images = styled.div`
 
   @media (max-width: ${MediaQuery.notebook}) {
     height: 17rem;
+  }
+
+  @media (max-width: ${MediaQuery.tablet}) {
+    height: 23rem;
   }
 `;

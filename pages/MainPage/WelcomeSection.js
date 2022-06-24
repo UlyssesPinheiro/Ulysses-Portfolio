@@ -8,6 +8,7 @@ import ButtonRounded from "../../Components/Reusables/Buttons/ButtonRounded";
 import EnvelopeSolid from "../../Components/Reusables/Icons/EnvelopeSolid";
 import Color from "../../Components/Defaults/Color";
 import Font from "../../Components/Defaults/Font";
+import MediaQuery from "../../Components/Defaults/MediaQuery";
 
 export default function WelcomeSection() {
   return (
@@ -60,6 +61,10 @@ const Grid = styled.div`
   align-items: center;
   width: 100%;
   gap: 1rem;
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    font-size: ${Font.size[2] + "px"};
+  }
 `;
 
 const ButtonDiv = styled.div`

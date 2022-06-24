@@ -13,6 +13,8 @@ const Color = {
   gray800: "#1F2937",
 
   shadow: "rgba(17, 24, 39, 0.1)",
+  shadow2: "rgba(17, 24, 39, 0.2)",
+  shadow3: "rgba(17, 24, 39, 0.3)",
 };
 
 export default Color;

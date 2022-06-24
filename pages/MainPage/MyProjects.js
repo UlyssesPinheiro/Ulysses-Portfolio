@@ -16,8 +16,8 @@ import appExtra1 from "../../public/Images/Projects/ExtraIncome/appExtra1.jpg";
 import appExtra2 from "../../public/Images/Projects/ExtraIncome/appExtra2.jpg";
 import appExtra3 from "../../public/Images/Projects/ExtraIncome/appExtra3.jpg";
 import myHabits1 from "../../public/Images/Projects/MyHabits/myHabits1.png";
-import myHabits2 from "../../public/Images/Projects/MyHabits/myHabits2.png";
 import memoryGame from "../../public/Images/Projects/MemoryGame/memoryGame.png";
+import MediaQuery from "../../Components/Defaults/MediaQuery";
 
 export default function ProjectsSection() {
   return (
@@ -38,14 +38,14 @@ export default function ProjectsSection() {
           title="My Habits - Create new habits"
           description="Use of DOM manipulation to know how many objects to generate and display on screen. To create new habits, the user fills a form. Data is stored locally, and it is not lost after the page is closed."
           techStack={[JavaScript, Html5, Css3]}
-          images={[myHabits1, myHabits2]}
+          images={[myHabits1]}
           reversedOrder="reversedOrder"
           linkView="https://ulyssespinheiro.github.io/my-habits/"
           linkGithub="https://github.com/UlyssesPinheiro/my-habits"
         ></Project>
         <Project
           title="Memory Game"
-          description="Classes and SRC attributes are used, with transitions and sound to flip the cards. The game creates a random array of cards. Then after each click, the logic compares the shown card aggainst the previous one."
+          description="Classes and SRC attributes are used, with transitions and sound to flip the cards. The game creates a random array of cards. Then, after each click, compares the card shown aggainst the previous."
           techStack={[JavaScript, Html5, Css3]}
           images={[memoryGame]}
           reversedOrder=""
@@ -59,9 +59,13 @@ export default function ProjectsSection() {
 
 const ProjectsDiv = styled.div`
   margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 15rem;
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    gap: 10rem;
+  }
 `;

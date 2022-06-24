@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Font from "../../Defaults/Font";
 import Color from "../../Defaults/Color";
+import MediaQuery from "../../Defaults/MediaQuery";
 
 export default function ButtonRounded({
   icon,
@@ -50,5 +51,11 @@ const ButtonSty = styled.button`
 
   &.expand {
     max-width: none;
+  }
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    padding: 0.5rem 1rem;
+
+    font-size: ${Font.size[6] + "px"};
   }
 `;

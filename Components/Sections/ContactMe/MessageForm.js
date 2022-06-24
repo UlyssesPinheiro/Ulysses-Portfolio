@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SmallButton from "../../Reusables/Buttons/SmallButton";
 import Font from "../../Defaults/Font";
 import PaperPlane from "../../Reusables/Icons/PaperPlane";
+import MediaQuery from "../../Defaults/MediaQuery";
 
 export default function MessageForm() {
   return (
@@ -29,6 +30,10 @@ export default function MessageForm() {
 
 const FormOuterContainer = styled.div`
   padding: 2.5rem;
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    padding: 1.7rem;
+  }
 `;
 
 const FormContainer = styled.div`
@@ -44,6 +49,10 @@ const FormContainer = styled.div`
   .buttonSend {
     display: flex;
     justify-content: flex-end;
+  }
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    padding: 0.8rem 1.3rem;
   }
 `;
 
@@ -73,5 +82,12 @@ const InputField = styled.div`
   .messageField {
     height: 100%;
     resize: none;
+  }
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    font-size: ${Font.size[2] + "px"};
+    .input {
+      font-size: ${Font.size[2] + "px"};
+    }
   }
 `;

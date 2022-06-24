@@ -5,6 +5,7 @@ import Font from "../../Defaults/Font";
 import GitHubSVG from "../../Reusables/Icons/GitHubSVG";
 import Gmail from "../../Reusables/Icons/Gmail";
 import LinkedIn from "../../Reusables/Icons/LinkedIn";
+import MediaQuery from "../../Defaults/MediaQuery";
 
 export default function OtherContactOptions() {
   function openWindow(link) {
@@ -56,6 +57,11 @@ const OuterContainer = styled.div`
     display: flex;
     gap: 2rem;
   }
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    font-size: ${Font.size[3] + "px"};
+    gap: 0.5rem;
+  }
 `;
 
 const ContactLink = styled.button`
@@ -89,5 +95,14 @@ const ContactLink = styled.button`
   &:focus {
     outline: none !important;
     border-bottom: 2px solid ${Color.primary500};
+  }
+
+  @media (max-width: ${MediaQuery.notebook}) {
+    font-size: ${Font.size[4] + "px"};
+    height: 3rem;
+
+    svg {
+      height: 2rem;
+    }
   }
 `;

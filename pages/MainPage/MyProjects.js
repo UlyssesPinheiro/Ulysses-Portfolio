@@ -17,7 +17,7 @@ import appExtra2 from "../../public/Images/Projects/ExtraIncome/appExtra2.jpg";
 import appExtra3 from "../../public/Images/Projects/ExtraIncome/appExtra3.jpg";
 import myHabits1 from "../../public/Images/Projects/MyHabits/myHabits1.png";
 import myHabits2 from "../../public/Images/Projects/MyHabits/myHabits2.png";
-import memoryGame from "../../public/Images/Projects/memoryGame/memoryGame.png";
+import memoryGame from "../../public/Images/Projects/MemoryGame/memoryGame.png";
 
 export default function ProjectsSection() {
   return (

@@ -66,6 +66,13 @@ const ProjectsDiv = styled.div`
   gap: 15rem;
 
   @media (max-width: ${MediaQuery.notebook}) {
-    gap: 10rem;
+    margin-top: 4rem;
+    gap: 13rem;
+  }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    gap: 9rem;
   }
 `;

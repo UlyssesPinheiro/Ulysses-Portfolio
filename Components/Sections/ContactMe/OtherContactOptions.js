@@ -62,6 +62,14 @@ const OuterContainer = styled.div`
     font-size: ${Font.size[3] + "px"};
     gap: 0.5rem;
   }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    font-size: ${Font.size[2] + "px"};
+    .buttonDiv {
+      gap: 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
 `;
 
 const ContactLink = styled.button`
@@ -104,5 +112,11 @@ const ContactLink = styled.button`
     svg {
       height: 2rem;
     }
+  }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    font-size: ${Font.size[3] + "px"};
+    padding: 0;
+    gap: 0.5rem;
   }
 `;

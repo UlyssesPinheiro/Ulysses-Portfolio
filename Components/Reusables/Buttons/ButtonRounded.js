@@ -58,4 +58,7 @@ const ButtonSty = styled.button`
 
     font-size: ${Font.size[6] + "px"};
   }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    font-size: ${Font.size[5] + "px"};
+  }
 `;

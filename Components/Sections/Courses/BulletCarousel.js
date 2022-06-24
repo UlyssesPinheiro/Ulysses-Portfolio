@@ -42,4 +42,8 @@ const BulletDiv = styled.div`
   @media (max-width: ${MediaQuery.tablet}) {
     bottom: 0rem;
   }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    height: 0.8rem;
+    gap: 1.2rem;
+  }
 `;

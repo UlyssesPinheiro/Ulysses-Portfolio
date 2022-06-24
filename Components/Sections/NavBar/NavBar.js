@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Color from "../../Defaults/Color";
 import MediaQuery from "../../Defaults/MediaQuery";
+import Font from "../../Defaults/Font";
 
 export default function NavBar() {
   return (
-    <NavDivUl>
+    <NavUl>
       <NavItem>
         <div
           onClick={() =>
@@ -39,11 +40,11 @@ export default function NavBar() {
           <p>Contact Me</p>
         </div>
       </NavItem>
-    </NavDivUl>
+    </NavUl>
   );
 }
 
-const NavDivUl = styled.ul`
+const NavUl = styled.ul`
   display: flex;
   flex-direction: row;
   margin: 2rem 5rem;
@@ -53,6 +54,11 @@ const NavDivUl = styled.ul`
     margin: 2rem 5rem 0;
     justify-content: space-evenly;
   }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    margin: 1rem 1rem 0;
+    gap: 1rem;
+  }
 `;
 
 const NavItem = styled.li`
@@ -61,5 +67,11 @@ const NavItem = styled.li`
   border-bottom: 2px solid transparent;
   &:hover {
     border-bottom: 2px solid ${Color.primary500};
+  }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    p {
+      font-size: ${Font.size[1] + "px"};
+      line-height: 2rem;
+    }
   }
 `;

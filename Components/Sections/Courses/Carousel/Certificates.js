@@ -67,12 +67,20 @@ const Certificate = styled.div`
   @media (max-width: ${MediaQuery.tablet}) {
     padding: 1rem 2rem 2.4rem;
   }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    padding: 0;
+  }
 `;
 
 const CertificateWrapper = styled.div`
   display: flex;
   overflow: hidden;
   flex: 1;
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const CropCertificate = styled.div`
@@ -80,6 +88,11 @@ const CropCertificate = styled.div`
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 40px ${Color.shadow};
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    border-radius: 0.7rem;
+    box-shadow: none;
+  }
 `;
 
 const CropThumbnail = styled.div`
@@ -93,4 +106,11 @@ const CropThumbnail = styled.div`
   position: absolute;
   right: 4rem;
   bottom: 2rem;
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    right: 0.3rem;
+    bottom: 0.3rem;
+    box-shadow: 2px 2px 5px ${Color.shadow};
+    border-radius: 0.5rem;
+  }
 `;

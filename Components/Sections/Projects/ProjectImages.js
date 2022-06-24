@@ -70,4 +70,8 @@ const Images = styled.div`
   @media (max-width: ${MediaQuery.tablet}) {
     height: 23rem;
   }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    height: 13rem;
+  }
 `;

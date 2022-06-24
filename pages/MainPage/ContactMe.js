@@ -34,10 +34,17 @@ const TitleWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+  text-align: center;
 
   @media (max-width: ${MediaQuery.tablet}) {
     p {
       font-size: ${Font.size[2] + "px"};
+    }
+  }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    p {
+      font-size: ${Font.size[1] + "px"};
+      line-height: 1.5rem;
     }
   }
 `;
@@ -56,5 +63,8 @@ const Grid = styled.div`
 const ImageDiv = styled.div`
   @media (max-width: ${MediaQuery.tablet}) {
     padding: 0 4rem;
+  }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    padding: 0;
   }
 `;

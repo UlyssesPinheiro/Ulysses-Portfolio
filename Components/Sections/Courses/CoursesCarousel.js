@@ -84,4 +84,16 @@ const Switch = styled.div`
       left: -2rem;
     }
   }
+  @media (max-width: ${MediaQuery.tablet}) {
+    width: 1rem;
+
+    &.right {
+      right: 0rem;
+    }
+    &.left {
+      left: 0rem;
+    }
+    bottom: -1rem;
+    z-index: 40;
+  }
 `;

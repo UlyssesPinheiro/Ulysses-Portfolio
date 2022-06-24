@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MediaQuery from "../Defaults/MediaQuery";
 
 export default function SectionWrapper({ id, color, children }) {
   return (
@@ -21,4 +22,8 @@ const MaxWidth = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 90rem;
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    padding: 4rem 2rem;
+  }
 `;

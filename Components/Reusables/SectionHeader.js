@@ -17,4 +17,9 @@ const Header = styled.h2`
     font-size: ${Font.size[9] + "px"};
     padding-bottom: 0.6rem;
   }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    text-align: center;
+    font-size: ${Font.size[7] + "px"};
+  }
 `;

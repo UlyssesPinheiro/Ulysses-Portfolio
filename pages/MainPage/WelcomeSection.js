@@ -68,6 +68,17 @@ const TextDiv = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    padding: 0;
+  }
+
+  @media (max-width: ${MediaQuery.smartphone}) {
+    p {
+      font-size: ${Font.size[1] + "px"};
+      line-height: 2rem;
+    }
+  }
 `;
 
 const Grid = styled.div`
@@ -96,5 +107,8 @@ const ButtonDiv = styled.div`
 const Programmer = styled.div`
   @media (max-width: ${MediaQuery.tablet}) {
     padding: 0 5rem;
+  }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    padding: 0;
   }
 `;

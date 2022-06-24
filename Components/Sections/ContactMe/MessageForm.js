@@ -38,6 +38,10 @@ const FormOuterContainer = styled.div`
   @media (max-width: ${MediaQuery.tablet}) {
     height: 27rem;
   }
+  @media (max-width: ${MediaQuery.smartphone}) {
+    height: 25rem;
+    padding: 0;
+  }
 `;
 
 const FormContainer = styled.div`

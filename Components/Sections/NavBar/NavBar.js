@@ -98,7 +98,7 @@ const NavUl = styled.ul`
   }
 
   @media (max-width: ${MediaQuery.smartphone}) {
-    margin: 1rem 1rem 0;
+    padding: 0.6rem 1rem;
     gap: 1rem;
   }
 `;

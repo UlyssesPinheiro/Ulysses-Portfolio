@@ -28,6 +28,6 @@ const MaxWidth = styled.div`
   max-width: 100rem;
 
   @media (max-width: ${MediaQuery.tablet}) {
-    padding: 0 2rem 5rem;
+    padding: 2rem 2rem 5rem;
   }
 `;

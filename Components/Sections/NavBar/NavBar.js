@@ -3,10 +3,34 @@ import styled from "styled-components";
 import Color from "../../Defaults/Color";
 import MediaQuery from "../../Defaults/MediaQuery";
 import Font from "../../Defaults/Font";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = function (e) {
+      // print "false" if direction is down and "true" if up
+      const scrollingUp = this.oldScroll > this.scrollY;
+      console.log(scrollingUp);
+      this.oldScroll = this.scrollY;
+      if (scrollingUp) {
+        setShowNavBar(true);
+      } else {
+        setShowNavBar(false);
+      }
+
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+  }, []);
+
   return (
-    <NavUl>
+    <NavUl className={scrolled ? (showNavBar ? "show" : "hidden") : ""}>
       <NavItem>
         <div
           onClick={() =>
@@ -47,11 +71,29 @@ export default function NavBar() {
 const NavUl = styled.ul`
   display: flex;
   flex-direction: row;
-  margin: 2rem 5rem;
+  padding: 1rem 5rem;
   gap: 4rem;
+  z-index: 50;
+  box-shadow: none;
+  position: fixed;
+  opacity: 1;
+
+  transition: all 300ms;
+  background-color: ${Color.white};
+  width: 100%;
+
+  &.show {
+    box-shadow: 3px 3px 3px ${Color.shadow};
+    opacity: 1;
+    top: 0px;
+  }
+  &.hidden {
+    opacity: 0;
+    top: -80px;
+  }
 
   @media (max-width: ${MediaQuery.tablet}) {
-    margin: 2rem 5rem 0;
+    padding: 1rem 5rem 0;
     justify-content: space-evenly;
   }
 

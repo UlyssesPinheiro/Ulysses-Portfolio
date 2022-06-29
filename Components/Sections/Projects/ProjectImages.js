@@ -5,10 +5,14 @@ import Color from "../../Defaults/Color";
 import binaryCode from "../../../public/Images/binaryCode.png";
 import MediaQuery from "../../Defaults/MediaQuery";
 
-export default function ProjectImages({ images, reversedOrder }) {
+export default function ProjectImages({ images, reversedOrder, linkView }) {
+  function openLink(link) {
+    window.open(link);
+  }
+
   return (
     <ImgDiv className={reversedOrder}>
-      <Images>
+      <Images onClick={() => openLink(linkView)}>
         {images.map((element, index) => (
           <div className="image" key={`image${index}`}>
             <Image src={element}></Image>
@@ -50,6 +54,7 @@ const Images = styled.div`
   width: 100%;
   display: flex;
   height: 23rem;
+  cursor: pointer;
 
   border-radius: 1rem;
   overflow: hidden;

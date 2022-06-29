@@ -24,8 +24,13 @@ export default function MessageForm() {
 
   return (
     <FormOuterContainer>
-      <FormContainer name="contact" action="POST" netlify className="form">
-        <div className="field">
+      <FormContainer
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        className="form"
+      >
+        <label className="field">
           <p>Your Email Address:</p>
           <input
             name="email"
@@ -33,31 +38,33 @@ export default function MessageForm() {
             className="input"
             placeholder="name@domain.com"
           />
-        </div>
-        <div className="field">
+        </label>
+        <label className="field">
           <p>Message:</p>
           <textarea
             name="message"
             className="input messageField"
             placeholder="Write something nice here!"
           />
-        </div>
+        </label>
         <div className="buttonSend">
-          <SmallButton
-            type="button"
-            onClick={handleClick}
-            color="light"
-            icon={<PaperClip className="icon" fill={Color.white} />}
-          >
-            File
-          </SmallButton>
-          <input
-            type="file"
-            ref={hiddenFileInput}
-            onChange={handleChange}
-            style={{ display: "none" }}
-          />
-          {fileName}
+          <label>
+            <SmallButton
+              type="button"
+              onClick={handleClick}
+              color="light"
+              icon={<PaperClip className="icon" fill={Color.white} />}
+            >
+              File
+            </SmallButton>
+            <input
+              type="file"
+              ref={hiddenFileInput}
+              onChange={handleChange}
+              style={{ display: "none" }}
+            />
+            {fileName}
+          </label>
           <div className="rightButton">
             <SmallButton
               type="submit"

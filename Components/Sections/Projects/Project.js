@@ -18,7 +18,11 @@ export default function Project({
 }) {
   return (
     <Grid>
-      <ProjectImages images={images} reversedOrder={reversedOrder} />
+      <ProjectImages
+        linkView={linkView}
+        images={images}
+        reversedOrder={reversedOrder}
+      />
       <div className="textDiv">
         <ProjectTitle>{title}</ProjectTitle>
         <p className="description">{description}</p>

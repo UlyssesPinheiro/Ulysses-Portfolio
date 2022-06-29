@@ -8,7 +8,29 @@ import PaperClip from "../../Reusables/Icons/PaperClip";
 import MediaQuery from "../../Defaults/MediaQuery";
 import { useState } from "react";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export default function MessageForm() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // const [file, setFile] = useState("");
+
+  function handleSubmit(e) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", email: email, message: message }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  }
+
   const [fileName, setFileName] = useState(<></>);
   const hiddenFileInput = React.useRef(null);
 
@@ -29,7 +51,7 @@ export default function MessageForm() {
         method="POST"
         data-netlify="true"
         className="form"
-        onSubmit="submit"
+        onSubmit={handleSubmit}
       >
         <label className="field">
           <p>Your Email Address:</p>
@@ -38,6 +60,7 @@ export default function MessageForm() {
             type="email"
             className="input"
             placeholder="name@domain.com"
+            onChange={(e) => setEmail(e)}
           />
         </label>
         <label className="field">
@@ -46,6 +69,7 @@ export default function MessageForm() {
             name="message"
             className="input messageField"
             placeholder="Write something nice here!"
+            onChange={(e) => setMessage(e)}
           />
         </label>
         <div className="buttonSend">

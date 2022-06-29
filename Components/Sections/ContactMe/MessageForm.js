@@ -17,7 +17,7 @@ const encode = (data) => {
 export default function MessageForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [file, setFile] = useState("");
+  const [file, setFile] = useState("");
 
   function handleSubmit(e) {
     fetch("/", {
@@ -69,7 +69,7 @@ export default function MessageForm() {
             name="message"
             className="input messageField"
             placeholder="Write something nice here!"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => setFile(e.target.value)}
           />
         </label>
         <div className="buttonSend">
@@ -85,7 +85,7 @@ export default function MessageForm() {
             <input
               type="file"
               ref={hiddenFileInput}
-              onChange={handleChange}
+              onChange={(e) => setMessage(e.target.value)}
               style={{ display: "none" }}
             />
             {fileName}

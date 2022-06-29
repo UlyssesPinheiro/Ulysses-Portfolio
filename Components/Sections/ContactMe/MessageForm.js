@@ -29,6 +29,7 @@ export default function MessageForm() {
         method="POST"
         data-netlify="true"
         className="form"
+        onSubmit="submit"
       >
         <label className="field">
           <p>Your Email Address:</p>

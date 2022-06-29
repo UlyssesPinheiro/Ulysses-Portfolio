@@ -23,7 +23,12 @@ export default function MessageForm() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", email: email, message: message }),
+      body: encode({
+        "form-name": "contact",
+        email: email,
+        message: message,
+        file: file,
+      }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
@@ -69,7 +74,7 @@ export default function MessageForm() {
             name="message"
             className="input messageField"
             placeholder="Write something nice here!"
-            onChange={(e) => setFile(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
           />
         </label>
         <div className="buttonSend">
@@ -85,7 +90,7 @@ export default function MessageForm() {
             <input
               type="file"
               ref={hiddenFileInput}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => setFile(e.target.value)}
               style={{ display: "none" }}
             />
             {fileName}

@@ -6,7 +6,7 @@ import Font from "../../Defaults/Font";
 import PaperPlane from "../../Reusables/Icons/PaperPlane";
 import PaperClip from "../../Reusables/Icons/PaperClip";
 import MediaQuery from "../../Defaults/MediaQuery";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -60,7 +60,7 @@ export default function MessageForm() {
             type="email"
             className="input"
             placeholder="name@domain.com"
-            onChange={(e) => setEmail(e)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <label className="field">
@@ -69,7 +69,7 @@ export default function MessageForm() {
             name="message"
             className="input messageField"
             placeholder="Write something nice here!"
-            onChange={(e) => setMessage(e)}
+            onChange={(e) => setMessage(e.target.value)}
           />
         </label>
         <div className="buttonSend">

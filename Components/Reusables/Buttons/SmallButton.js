@@ -8,12 +8,14 @@ export default function ButtonRounded({
   icon,
   children,
   color = "dark",
-  expand = "",
+  expand = "expand",
   onClick,
   title,
+  type,
 }) {
   return (
     <ButtonSty
+      type={type}
       title={title}
       onClick={onClick}
       className={`button ${color} ${expand}`}
@@ -32,7 +34,6 @@ const ButtonSty = styled.button`
   display: grid;
   grid-template-columns: auto auto;
   gap: 0.8rem;
-  max-width: fit-content;
   align-items: center;
   user-select: none;
   cursor: pointer;
@@ -55,10 +56,6 @@ const ButtonSty = styled.button`
   }
   &.light:hover {
     background-color: ${Color.gray500};
-  }
-
-  &.expand {
-    max-width: none;
   }
 
   .icon {

@@ -107,9 +107,15 @@ const NavItem = styled.li`
   list-style-type: none;
   cursor: pointer;
   border-bottom: 2px solid transparent;
+
+  p {
+    user-select: none;
+  }
+
   &:hover {
     border-bottom: 2px solid ${Color.primary500};
   }
+
   @media (max-width: ${MediaQuery.smartphone}) {
     p {
       font-size: ${Font.size[1] + "px"};

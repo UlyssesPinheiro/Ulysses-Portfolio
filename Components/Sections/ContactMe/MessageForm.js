@@ -24,7 +24,7 @@ export default function MessageForm() {
 
   return (
     <FormOuterContainer>
-      <FormContainer action="POST" data-netlify="true" className="form">
+      <FormContainer name="contact" action="POST" netlify className="form">
         <div className="field">
           <p>Your Email Address:</p>
           <input
@@ -60,6 +60,7 @@ export default function MessageForm() {
           {fileName}
           <div className="rightButton">
             <SmallButton
+              type="submit"
               icon={<PaperPlane className="icon" fill={Color.white} />}
             >
               Send

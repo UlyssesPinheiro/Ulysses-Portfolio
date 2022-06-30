@@ -11,6 +11,8 @@ import NextJS from "../../public/Icons/TechStack/NextJS.png";
 import Expo from "../../public/Icons/TechStack/Expo.png";
 import Html5 from "../../public/Icons/TechStack/Html5.png";
 import Css3 from "../../public/Icons/TechStack/Css3.png";
+import StyledComponentsImg from "../../public/Icons/TechStack/StyledComponents.png";
+import ReduxImg from "../../public/Icons/TechStack/Redux.png";
 
 import appExtra1 from "../../public/Images/Projects/ExtraIncome/appExtra1.jpg";
 import appExtra2 from "../../public/Images/Projects/ExtraIncome/appExtra2.jpg";
@@ -29,7 +31,15 @@ export default function ProjectsSection() {
           subtitle="[React Native / Expo - Multiplatform App]"
           description="The app allows the user
           to publish products and services, search them and reorder product listings. Local state storage managed with Redux Persist. Layout CSS developed with Styled-Components."
-          techStack={[ReactImg, Expo, JavaScript, Html5, Css3]}
+          techStack={[
+            ReactImg,
+            Expo,
+            ReduxImg,
+            StyledComponentsImg,
+            JavaScript,
+            Html5,
+            Css3,
+          ]}
           images={[appExtra1, appExtra2, appExtra3]}
           linkView="https://expo.dev/@ulyssespinheiro/CumbucaRendaExtra"
           linkGithub="https://github.com/UlyssesPinheiro/Cumbuca-Conceito-Renda-Extra"

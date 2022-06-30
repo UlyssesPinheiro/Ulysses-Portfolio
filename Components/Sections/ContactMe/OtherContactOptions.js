@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Color from "../../Defaults/Color";
 import Font from "../../Defaults/Font";
-import GitHubSVG from "../../Reusables/Icons/GitHubSVG";
+import Whatsapp from "../../Reusables/Icons/Whatsapp";
 import Gmail from "../../Reusables/Icons/Gmail";
 import LinkedIn from "../../Reusables/Icons/LinkedIn";
 import MediaQuery from "../../Defaults/MediaQuery";
@@ -19,7 +19,7 @@ export default function OtherContactOptions() {
         <ContactLink
           onClick={openWindow.bind(this, "mailto:ulyssespinheiro00@gmail.com")}
         >
-          <Gmail fill={Color.gray800}></Gmail>Email
+          <Gmail fill={Color.gray800}></Gmail>E-mail
         </ContactLink>
         <ContactLink
           onClick={openWindow.bind(
@@ -30,10 +30,10 @@ export default function OtherContactOptions() {
           <LinkedIn fill={Color.gray800}></LinkedIn>LinkedIn
         </ContactLink>
         <ContactLink
-          onClick={openWindow.bind(this, "https://github.com/UlyssesPinheiro")}
+          onClick={openWindow.bind(this, "https://wa.me/5521979211446")}
         >
-          <GitHubSVG fill={Color.gray800}></GitHubSVG>
-          GitHub
+          <Whatsapp fill={Color.gray800}></Whatsapp>
+          Whatsapp
         </ContactLink>
       </div>
     </OuterContainer>
@@ -55,19 +55,24 @@ const OuterContainer = styled.div`
 
   .buttonDiv {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    row-gap: 0;
+    justify-content: center;
   }
 
   @media (max-width: ${MediaQuery.notebook}) {
     font-size: ${Font.size[3] + "px"};
     gap: 0.5rem;
+    row-gap: 0;
   }
   @media (max-width: ${MediaQuery.smartphone}) {
     font-size: ${Font.size[2] + "px"};
     .buttonDiv {
-      gap: 0;
+      gap: 2rem;
+      row-gap: 0;
       width: 100%;
-      justify-content: space-between;
+      /* justify-content: space-between; */
     }
   }
 `;

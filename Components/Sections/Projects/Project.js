@@ -4,7 +4,7 @@ import Color from "../../Defaults/Color";
 import Font from "../../Defaults/Font";
 import MediaQuery from "../../Defaults/MediaQuery";
 import ProjectButtons from "./ProjectButtons";
-import TechStack from "./TechStack";
+import TechStack from "../../Reusables/TechStack";
 import ProjectImages from "./ProjectImages";
 
 export default function Project({

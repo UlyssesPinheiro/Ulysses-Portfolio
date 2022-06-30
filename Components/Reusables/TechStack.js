@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/dist/client/image";
 
-import Color from "../../Defaults/Color";
+import Color from "../Defaults/Color";
 
-export default function TechStack({ techStack }) {
+export default function TechStack({ techStack, children = "Tech Stack" }) {
   return (
     <div>
-      <strong>Tech Stack</strong>
+      <strong>{children}</strong>
       <TechDiv>
         {techStack.map((element, index) => (
           <div className="techStack" key={`techStack${index}`}>
@@ -20,9 +20,11 @@ export default function TechStack({ techStack }) {
 }
 
 const TechDiv = styled.div`
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 0;
   display: flex;
   gap: 0.6rem;
+
+  flex-wrap: wrap;
 
   .techStack {
     height: 2rem;

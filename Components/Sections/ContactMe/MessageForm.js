@@ -4,7 +4,7 @@ import styled from "styled-components";
 import SmallButton from "../../Reusables/Buttons/SmallButton";
 import Font from "../../Defaults/Font";
 import PaperPlane from "../../Reusables/Icons/PaperPlane";
-import PaperClip from "../../Reusables/Icons/PaperClip";
+// import PaperClip from "../../Reusables/Icons/PaperClip";
 import MediaQuery from "../../Defaults/MediaQuery";
 import { useState, useEffect } from "react";
 
@@ -17,7 +17,7 @@ const encode = (data) => {
 export default function MessageForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [file, setFile] = useState("");
+  // const [file, setFile] = useState("");
 
   function handleSubmit(e) {
     fetch("/", {
@@ -27,7 +27,7 @@ export default function MessageForm() {
         "form-name": "contact",
         email: email,
         message: message,
-        file: file,
+        // file: file,
       }),
     })
       .then(() => alert("Success!"))
@@ -36,18 +36,18 @@ export default function MessageForm() {
     e.preventDefault();
   }
 
-  const [fileName, setFileName] = useState(<></>);
-  const hiddenFileInput = React.useRef(null);
+  // const [fileName, setFileName] = useState(<></>);
+  // const hiddenFileInput = React.useRef(null);
 
-  const handleClick = (event) => {
-    hiddenFileInput.current.click();
-  };
+  // const handleClick = (event) => {
+  //   hiddenFileInput.current.click();
+  // };
 
-  const handleChange = (event) => {
-    const fileUploaded = event.target.files[0];
-    console.log(fileUploaded);
-    setFileName(<p>{fileUploaded?.name}</p>);
-  };
+  // const handleChange = (event) => {
+  //   const fileUploaded = event.target.files[0];
+  //   console.log(fileUploaded);
+  //   setFileName(<p>{fileUploaded?.name}</p>);
+  // };
 
   return (
     <FormOuterContainer>
@@ -61,6 +61,7 @@ export default function MessageForm() {
         <label className="field">
           <p>Your Email Address:</p>
           <input
+            required
             name="email"
             type="email"
             className="input"
@@ -71,6 +72,7 @@ export default function MessageForm() {
         <label className="field">
           <p>Message:</p>
           <textarea
+            required
             name="message"
             className="input messageField"
             placeholder="Write something nice here!"
@@ -78,7 +80,7 @@ export default function MessageForm() {
           />
         </label>
         <div className="buttonSend">
-          <label>
+          {/* <label>
             <SmallButton
               type="button"
               onClick={handleClick}
@@ -94,7 +96,7 @@ export default function MessageForm() {
               style={{ display: "none" }}
             />
             {fileName}
-          </label>
+          </label> */}
           <div className="rightButton">
             <SmallButton
               type="submit"
@@ -138,13 +140,14 @@ const FormContainer = styled.form`
   .buttonSend {
     display: flex;
     position: relative;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: flex-end;
     gap: 0.5rem;
 
     .rightButton {
-      position: absolute;
-      right: 0;
-      overflow: hidden;
+      /* position: absolute; */
+      /* right: 0; */
+      /* overflow: hidden; */
     }
     p {
       align-self: center;
@@ -185,7 +188,7 @@ const FormContainer = styled.form`
     }
 
     .input:focus {
-      outline: 1px solid ${Color.primary700};
+      outline: 4px solid ${Color.primary200};
       border: 1px solid ${Color.primary700};
     }
 

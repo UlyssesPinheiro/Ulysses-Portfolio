@@ -77,6 +77,7 @@ const NavUl = styled.ul`
   box-shadow: none;
   position: fixed;
   opacity: 1;
+  top: 0px;
 
   transition: all 300ms;
   background-color: ${Color.white};

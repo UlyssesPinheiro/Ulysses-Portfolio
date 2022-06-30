@@ -33,7 +33,7 @@ const ButtonSty = styled.button`
   color: ${Color.white};
   display: grid;
   grid-template-columns: auto auto;
-  gap: 0.8rem;
+  gap: 0.5rem;
   align-items: center;
   user-select: none;
   cursor: pointer;
@@ -41,24 +41,30 @@ const ButtonSty = styled.button`
   font-size: ${Font.size[5] + "px"};
 
   &:focus {
-    outline: none !important;
+    /* outline: none !important; */
   }
 
   &.dark {
     background-color: ${Color.gray700};
+    &:hover {
+      background-color: ${Color.gray800};
+    }
   }
-  &.dark:hover {
-    background-color: ${Color.gray800};
-  }
-
   &.light {
     background-color: ${Color.gray400};
+    &:hover {
+      background-color: ${Color.gray500};
+    }
   }
-  &.light:hover {
-    background-color: ${Color.gray500};
+  &.white {
+    background-color: ${Color.white};
+    color: ${Color.gray600};
+    &:hover {
+      background-color: ${Color.gray200};
+    }
   }
 
   .icon {
-    height: ${Font.size[5] + "px"};
+    height: ${Font.size[6] + "px"};
   }
 `;

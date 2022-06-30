@@ -41,4 +41,5 @@ const ButtonsDiv = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  margin: 1rem 0 0;
 `;

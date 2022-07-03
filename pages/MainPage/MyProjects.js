@@ -27,7 +27,7 @@ export default function ProjectsSection() {
       <SectionHeader>My Projects:</SectionHeader>
       <ProjectsDiv>
         <Project
-          title="Extra Income App"
+          title="Incomefy - Extra Income App"
           subtitle="[React Native / Expo - Multiplatform App]"
           description="The app allows the user
           to publish products and services, search them and reorder product listings. Local state storage managed with Redux Persist. Layout CSS developed with Styled-Components."
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
             Css3,
           ]}
           images={[appExtra1, appExtra2, appExtra3]}
-          linkView="https://expo.dev/@ulyssespinheiro/CumbucaRendaExtra"
+          linkView="https://incomefy.netlify.app/"
           linkGithub="https://github.com/UlyssesPinheiro/Cumbuca-Conceito-Renda-Extra"
         ></Project>
         <Project

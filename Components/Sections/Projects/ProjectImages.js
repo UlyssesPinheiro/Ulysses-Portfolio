@@ -59,7 +59,6 @@ const Images = styled.div`
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 5px 50px ${Color.shadow};
-  background-color: ${Color.gray400};
   z-index: 10;
 
   .image {

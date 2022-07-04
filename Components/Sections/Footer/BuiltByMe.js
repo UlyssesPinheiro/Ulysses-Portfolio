@@ -14,7 +14,7 @@ export default function BuiltByMe({ className }) {
   return (
     <MiddleDiv className={className}>
       <div>
-        <p>This Website was also built by me, from ground up.</p>
+        <p>This Website was also built by me, from the ground up.</p>
         <p>All rights reserved, view project bellow:</p>
       </div>
       <SmallButton

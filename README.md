@@ -1,5 +1,5 @@
 # Ulysses-Portfolio
-A portfolio containing my original projects and courses completed by me. Built with Next.Js, React and Styled Components
+A portfolio containing my original projects and courses completed by me. Built with Next.Js, React and Styled Components.
 
 ## Link to view:
 https://ulyssespinheiro.netlify.app/

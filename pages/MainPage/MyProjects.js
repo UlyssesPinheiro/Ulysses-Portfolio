@@ -55,7 +55,7 @@ export default function ProjectsSection() {
         ></Project>
         <Project
           title="Memory Game"
-          description="Classes and SRC attributes are used, with transitions and sound to flip the cards. The game creates a random array of cards. Then, after each click, compares the card shown aggainst the previous."
+          description="Classes and SRC attributes are used, with transitions and sound to flip the cards. The game creates a random array of cards. Then, after each click, compares the card shown against the previous."
           techStack={[JavaScript, Html5, Css3]}
           images={[memoryGame]}
           reversedOrder=""

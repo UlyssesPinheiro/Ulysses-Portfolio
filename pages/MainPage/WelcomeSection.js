@@ -30,7 +30,7 @@ export default function WelcomeSection() {
             </p>
           </div>
           <ButtonDiv>
-            <p>Want to contact me? Lets work together!</p>
+            <p>Want to contact me? Let’s work together!</p>
             <ButtonRounded
               onClick={() =>
                 document
